@@ -1,0 +1,15 @@
+<!-- <p>class-binding works!</p> -->
+<h1 [class]="myclass">class binding</h1>
+
+<h2 [class.danger]="rating>4">this using  condition in class binding</h2>
+
+<h2 [class.danger]="rating>4"
+    [class.warning]="rating<4">
+    class binding using multiple condition in same attribute
+</h2>
+
+<!-- ngClass 
+it is used to take multiple css class style 
+-->
+
+<div [ngClass]="myjson">using ngClass </div>

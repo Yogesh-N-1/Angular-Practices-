@@ -1,0 +1,67 @@
+<p>demo-tdf works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            
+<!-- event derective to submit from and send data to componet file (ngSubmit="sub(formref)") -->
+             <form #formref="ngForm" (ngSubmit)="onSubmit(formref)"> <!-- ngForm is a directive -->
+                <!-- to check wherther data is coming or not in name atteribute-->
+                {{formref.value | json}}
+                <br><br><br>
+                <!-- json pipe for check data comeing or not  -->
+            <div class="form-group">
+                <label for=""> Username ::</label>
+                <input #username="ngModel" type="text" class="form-control" ngModel name="username"
+                placeholder="Enter Username" required minlength="5" pattern="Admin">
+            </div>
+            <div class="alert alert-danger " *ngIf="username.touched && !username.valid"> 
+                **Please Enter Valid Username
+                <div *ngIf="username.errors.minlength">** Username minlength is {{username.errors.minlength.requiredLength}} charechters
+                </div>
+                <div *ngIf="username.errors.pattern">**Enter Appropriate User</div>
+
+            </div>
+            <div class="form-group">
+                <label for="">Comment</label>
+                <textarea #comment="ngModel" ngModel name="comment" placeholder="Enter Comment"
+                 id="" class='form-control'cols="30" rows="10" required></textarea>
+            </div>
+            <div class="alret alert-danger" 
+            *ngIf="comment.touched && comment.invalid "> **Please type your comment
+            
+            </div>
+            <div class="checkbox">
+                <label for="check1">
+                <input ngModel #check1="ngModel" type="checkbox" name="Agree" id="check1" required>
+                I Agree All Terms & Condition...</label> 
+            </div>
+           
+            <div  class="radio">
+                
+                <label for="radio1"><input ngModel #contact="ngModel" type="radio" 
+                    name="con" id="radio1" value="Email" required>Email</label>
+            </div>
+            
+            <div class="radio">
+    <label for="radio2"><input ngModel #contact="ngModel" type="radio" name="con" 
+    id="radio2" value="Phone" required>Phone</label>
+            </div>
+            <div class="form-group">
+                <label for="">Contact</label>
+                <select ngModel #cont="ngModel" name="Contact" value="Contact" class="form-control" placeholder="cont" id="cont" required>
+                    <option [ngValue]="item" *ngFor="let item of ContactMethod" >{{item.name}}</option>
+                    <!-- if we want to send only value we can use "[value]='item.id' it will send id" -->
+                    <!-- if we want to send value in json object use [ngValue]='item' -->
+                </select>
+            </div>
+
+            
+            <br>
+            <button [disabled]="!formref.valid"  class="btw btn-outline-success">Submit</button>
+        </form>
+
+        </div>
+
+    </div>
+</div>

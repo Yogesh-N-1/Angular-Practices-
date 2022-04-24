@@ -1,0 +1,27 @@
+<p>inbuild-pipe works!</p>
+<!-- curruncy,percent,uppercase,lowercase,slice,date,number -->
+
+<h1>{{mytime}}</h1>
+<h2>{{mytime | date:'hh:mm:ss a'}}</h2>
+<!--'hh:mm:ss a' "a" is showing AM or PM -->
+<h2>{{mytime | date:'hh:mm a' | lowercase}}</h2>
+<!-- pipe after pipe we can use -->
+<h2>{{mytime | date:'dd-MM-yyyy'}}</h2>
+<h2>{{mytime | date:'longDate' |uppercase}}</h2>
+
+<h2>{{25 |currency}}</h2>
+<!-- by dafault it is doller -->
+<h2>{{30 | currency:'INR'}}</h2>
+<!-- INR is country code for currency we need to give paremeter country code -->
+
+<h2>{{0.25 |percent}}</h2>
+<h2>{{0.055 |percent:'1.1'}}</h2>
+<h2>{{0.025 |percent:'1.2'}}</h2>
+
+
+<h2>{{0.343231 | number:'1.2-3'}}</h2>
+<!-- left side 1 denot min one value right side 2-3 represent renge min 2 and max 3 -->
+
+<h2>{{34.434344 |number:'1.2-3'}}</h2>
+
+<h2>{{mystr |slice:0:20}}</h2>

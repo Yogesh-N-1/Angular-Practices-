@@ -1,0 +1,24 @@
+.success{
+    color: green;
+    
+
+}
+.danger{
+    color:red;
+}
+.warning{
+    color: orange;
+}
+.special{
+    color: red;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 34px;
+    font: italic;
+    border: 3px solid blue;
+    border-radius:10px;
+}
+.pic{
+    height: 400px;
+    width: 100%;
+}

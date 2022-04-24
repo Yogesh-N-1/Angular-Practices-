@@ -1,0 +1,11 @@
+<p>parent works!</p>
+<hr>
+
+<!-- data from parent to child -->
+
+<!-- <app-chlid1 [dataFromParent]="parentData" [parentarry]="arry" [parentArryobj]="arryObj"></app-chlid1> -->
+
+<!-- data from child to parent implimentation -->
+<app-chlid2 (childToParentEvent)="childToParent=$event"></app-chlid2>
+
+<h1> data :: {{childToParent}} </h1>

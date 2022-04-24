@@ -1,0 +1,22 @@
+<p>for-directive works!</p>
+<table [class]="myclass">
+    <thead>
+        <th>Id</th>
+        <th>name</th>
+        <th>price</th>
+        <th>quntity</th>
+    </thead>
+    <tbody>
+        
+    <tr (mouseover)="onmouse(item)" (mouseout)="mouseout()" [ngClass]="{'selected':highlight==item.name}" *ngFor="let item of arrObj;index as i">
+
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.quntity}}</td>
+    </tr>
+</tbody>
+
+
+
+</table>

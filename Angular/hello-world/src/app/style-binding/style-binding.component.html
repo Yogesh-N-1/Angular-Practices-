@@ -1,0 +1,9 @@
+<p>style-binding works!</p>
+<!-- syntax =>[style.cssPropartyName]="propartyName" -->
+
+<h1 [style.color]="mycolor">apply style style-binding</h1>
+
+<h1 [style.color]="rating<4?'red':'green'">apply on condition'if rating is higher than 4 it will green else it will red'</h1>
+
+<!-- ngStyle -->
+<h2 [ngStyle]="myjson">this is ngStyle ,take multiple css style in the from of json</h2>

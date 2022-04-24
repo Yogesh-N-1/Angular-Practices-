@@ -1,0 +1,41 @@
+<p>home works!</p>
+<a routerLink="/Page1">Page1</a>
+<!-- send parameter id need to configure in app-routing-module-->
+<a [routerLink]="['/Page2' ,myid]">Page2</a>
+<!-- sending multiple parameter need to configure in app-routing-module -->
+<a [routerLink]="['Page3',myid,username]">Page3</a>
+<a routerLink="/Follower">Follower</a>
+<!-- we no need to configure but we need to use predifine keywork "queryParams" -->
+<a routerLink="/QueryParameter" [queryParams]="myjson">QueryParameter</a>
+<br><br><hr>
+<!-- dynamic routing we no need to use routerLink in dynamic 
+routing insted of this we use navigate method in ts componed
+dynamic routing...... -->
+<button (click)="onPage1()">Page1</button>
+<button (click)="onPage2()">Page2</button>
+<button (click)="onPage3()">Page3</button>
+<button (click)="onFollower()">Follower</button>
+<!-- dynamic queryparameter sending -->
+<button (click)="onQueryParameter()">QueryParameter</button>
+
+
+<!-- example -->
+<div class="loginbox">
+<table id="table">
+    <tbody>
+        <tr>
+            <td>Username</td>
+            <td>
+            <input #inputname type="text" placeholder="Enter Username">
+            </td>  
+        </tr>
+        <tr>
+        <td>Password</td>
+            <td>
+            <input #inputpassword type="password" placeholder="Enter Password">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="onLogin(inputname.value,inputpassword.value)">login</button>
+</div>

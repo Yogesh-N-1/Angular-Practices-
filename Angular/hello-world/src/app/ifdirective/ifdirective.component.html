@@ -1,0 +1,21 @@
+<p>ifdirective works!</p>
+
+<!-- we are using if directive mostly to div tag but we can use to any tag -->
+<!-- in structural directive we need to give * are menditory  -->
+<!-- <div *ngIf="rating<5">
+
+    <h1>condition is true</h1>
+</div> -->
+
+<!-- we can give else keyword for it  -->
+<div *ngIf="rating<4;else refvar">
+
+    <h1>condition true</h1>
+</div>
+<!-- <div #refvar > this will show always even condition is true 
+    <h2>condition false</h2>
+</div> -->
+<!-- we can take ng-template it is hiddin by defult we can use it -->
+<ng-template #refvar>
+    <h3>condition is false</h3>
+</ng-template>

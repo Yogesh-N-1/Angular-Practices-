@@ -1,0 +1,16 @@
+<p>switch-directiv works!</p>
+<input #inputcolor type="text" placeholder="Enter the color"> <br>
+<button (click)="Onclick(inputcolor.value)">send</button>
+
+<div [ngSwitch]="choice">
+    <div *ngSwitchCase="'red'" [style.background]="choice">
+        <h2>Your Color code is {{choice}}</h2>
+    </div>
+    <div *ngSwitchCase="'blue'" [style.background]="choice">
+        <h2>Your color code is {{choice}}</h2>
+    </div>
+    <div *ngSwitchDefault [ngStyle]="json">
+        <h2>Your color code is wrong {{choice}}</h2>
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+<p>post works!</p>
+<!-- <h3>post method </h3> -->
+<input #inputtitle type="text" placeholder="title"> <br><br>
+<input #inputbody type="text" placeholder="body"><br><br>
+<button (click)="onSend(inputtitle.value,inputbody.value)">send</button>
+<br><br><br>
+
+<!-- <h3>put Method/update method</h3> -->
+<div [hidden]="isHidden">
+<label for="">Id:: &nbsp; &nbsp;&nbsp;</label>
+<input [(ngModel)]="id" type="text" placeholder="id" readonly><br><br>
+<label for="focus">title:: &nbsp; &nbsp;&nbsp;</label>
+<input id="focus" [(ngModel)]="title" type="text" placeholder="title"> <br><br>
+<label for="">body:: &nbsp; &nbsp;&nbsp;</label>
+<input [(ngModel)]="body" type="text" placeholder="body"><br><br>
+<button (click)="onUpdate()">Update</button>
+</div>
+
+<br>
+<hr>
+
+
+<table >
+    <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Body</th>
+
+    </thead>
+    <tr *ngFor="let item of posts" >
+        <td>{{item.id}}</td>
+        <td><button  (click)="onEdit(item)">Edit</button>
+            <!-- delete method -->
+            <button (click)="onDelete(item.id)">Delete</button>
+        </td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+    </tr>
+    <tbody>
+
+
+    </tbody>
+</table>

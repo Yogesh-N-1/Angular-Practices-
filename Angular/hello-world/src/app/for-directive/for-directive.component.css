@@ -1,0 +1,19 @@
+.table{
+    margin-left: 25%;
+    border: 2px solid red;
+    height: 50%;
+    width: 50%;
+    text-align: center;
+
+}
+
+.selected{
+    background: red;
+    font-style: italic;
+    
+}
+.td:nth-child(4n+1){
+    background:black;
+
+
+}

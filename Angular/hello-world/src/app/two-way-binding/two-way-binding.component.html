@@ -1,0 +1,12 @@
+<p>two-way-binding works!</p>
+
+<input  type="text" [(ngModel)]="name" >
+<h1>Display:: {{name}}</h1>
+<br>
+
+<input (keyup)='onkeyUp()' type="text" placeholder="key up event"><br>
+<input (keydown)='onkeyDown()' type="text" placeholder="key down event"><br><br>
+<br>
+<p>limit for message 10 char only</p>
+<input (keydown)="keyCount()" type="text" placeholder="type message">
+<h2>{{limit}}</h2>
