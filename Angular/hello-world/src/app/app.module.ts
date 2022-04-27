@@ -31,7 +31,8 @@ import { MyfollowerComponent } from './myfollower/myfollower.component';
 import { QueryparameterComponent } from './queryparameter/queryparameter.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DemoBootstrapComponent } from './demo-bootstrap/demo-bootstrap.component';
-import { DemoTdfComponent } from './demo-tdf/demo-tdf.component'
+import { DemoTdfComponent } from './demo-tdf/demo-tdf.component';
+import { SpringCComponent } from './spring-c/spring-c.component'
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { DemoTdfComponent } from './demo-tdf/demo-tdf.component'
     QueryparameterComponent,
     NotfoundComponent,
     DemoBootstrapComponent,
-    DemoTdfComponent
+    DemoTdfComponent,
+    SpringCComponent
   ],
   imports: [
     BrowserModule,

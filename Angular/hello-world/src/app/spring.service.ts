@@ -5,11 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SpringService {
-private URl:string=''
+private URl:string='http://localhost:8080/name';
   constructor(private http:HttpClient) { 
 
   }
-  doPost(){
+  doGet(){
     return (this.http.get(this.URl));
+
   }
+  
+  
+
 }
